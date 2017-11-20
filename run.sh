@@ -210,6 +210,11 @@ if ! [ -z ${AD_HOST} ]; then
 	sed -i "s/<AD_BINPASSWORD>/${AD_BINPASSWORD}/" $RDECK_BASE/server/config/jaas-activedirectory.conf
 	sed -i "s/<AD_USERBASEDN>/${AD_USERBASEDN}/" $RDECK_BASE/server/config/jaas-activedirectory.conf
 	sed -i "s/<AD_ROLEBASEDN>/${AD_ROLEBASEDN}/" $RDECK_BASE/server/config/jaas-activedirectory.conf
+	sed -i "s/<AD_USER_RDN>/${AD_USER_RDN}/" $RDECK_BASE/server/config/jaas-activedirectory.conf
+	sed -i "s/<AD_USER_ID>/${AD_USER_ID}/" $RDECK_BASE/server/config/jaas-activedirectory.conf
+	sed -i "s/<AD_USER_PASSWORD>/${AD_USER_PASSWORD}/" $RDECK_BASE/server/config/jaas-activedirectory.conf
+	sed -i "s/<AD_USER_OBJECT>/${AD_USER_OBJECT}/" $RDECK_BASE/server/config/jaas-activedirectory.conf
+	sed -i "s/<AD_ROLE_OBJECT>/${AD_ROLE_OBJECT}/" $RDECK_BASE/server/config/jaas-activedirectory.conf
 	
 	params="$params -Dloginmodule.conf.name=jaas-activedirectory.conf "
 	params="$params -Dloginmodule.name=activedirectory "

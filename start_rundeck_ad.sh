@@ -20,5 +20,10 @@ docker run -d \
 	-e AD_BINPASSWORD="mypassword " \
 	-e AD_USERBASEDN="DC=example,DC=com" \
 	-e AD_ROLEBASEDN="CN=example_developer,OU=ExampleOU,DC=example,DC=com" \
+	-e AD_USER_RDN="sAMAccountName" \
+	-e AD_USER_ID="sAMAccountName" \
+	-e AD_USER_PASSWORD="unicodePwd" \
+	-e AD_USER_OBJECT="user" \
+	-e AD_ROLE_OBJECT="group" \
 	--name rundeck -h rundeck \
 	hbjcr/rundeck
